@@ -285,12 +285,17 @@ Operators obeying these conditions will be called \textbf{Schur operators}. Let 
 As we see in the case of ordinary chiral operators in a supersymmetric theory, those chiral operators are annihilated by a chosen supercharge regardless of the insertion point. Things get a bit more complicated in our current case, because translation generators do not commute with $\mathcal{S}_1^-, \widetilde{\mathcal{S}}^{2\dot{-}}$, appeared in the definition of $\mathbb{Q}$. There is no way to define the translation of a Schur operator from the origin to a point outside of the $(z, \bar{z})$ plane so that it continues to represent a $\mathbb{Q}_i$-cohomology class. However, we can define translation within the plane.
 
 We can define \textbf{twisted-translated operators}
-\begin{equation}
+\begin{equation}\label{eqn:twisted-translated-op}
     \mathcal{O}(z, \bar{z}) = e^{zL_{-1} + \bar{z} \widehat{L}_{-1}} \mathcal{O}(0) e^{-z L_{-1} - \bar{z} \widehat{L}_{-1}},
 \end{equation}
 where $\mathcal{O}(0)$ is a Schur operator. Buy construction, these twisted-translated operators are $\mathbb{Q}_i$-closed, and the cohomology class of these operators is well defined and depends on the insertion point holomorphically,
 \begin{equation}
     [\mathcal{O}(z, \bar{z})]_{\mathbb{Q}} \quad \Rightarrow \quad \mathcal{O}(z).
+\end{equation}
+
+We can also write the operators (\ref{eqn:twisted-translated-op}) in terms of a more standard basis of local operators at the point $(z,\bar{z})$. Consider a spin $k$ representation of $\mathfrak{sl}(2)_R$ as $\mathcal{O}^{\mathcal{I}_1  \mathcal{I}_2 \cdots \mathcal{I}_{2k}}(z, \bar{z})$, it is argued that Schur operators at the origin occupy the highest-weight states of the corresponding spin $k$ representation, i.e., it is given by $\mathcal{O}^{11...1}(0)$. The twisted-translated operator at any other point is defined as
+\begin{equation}
+    \mathcal{O}(z, \bar{z}) := u_{\mathcal{I}_1}(\bar{z}) \cdots u_{\mathcal{I}_{2k}}(\bar{z}) \mathcal{O}^{\mathcal{I}_1 ... \mathcal{I}_{2k}}(z, \bar{z}), \quad u_{\mathcal{I}}(\bar{z}) := (1, \bar{z}).
 \end{equation}
 
 \section{Chiral OPE}
@@ -330,7 +335,7 @@ Short representations occur when one or more of these bounds are saturated, and 
 Recall that for Schur operators, we need to have $r = j_2 - j_1$ and $E = 2R + j_1 + j_2$. ($h = R + j_1 + j_2$)
 
 \subsection{Schur operators in the supermultiplets}
-For each supermultiplet, we denote by $\Psi$ the superconformal primary. Each of the above supermultiplets contains exactly one conformal primary Schur operator $\mathcal{O}_\mathrm{Schur}$, which in general is obtained by the action of some Poincar\'{e} supercharges on $\Psi$. We summarize these in the following table
+For each supermultiplet, we denote by $\Psi$ the superconformal primary. Each of the above supermultiplets contains exactly one conformal primary Schur operator $\mathcal{O}_\mathrm{Schur}$, which in general is obtained by the action of some Poincar\'{e} supercharges on $\Psi$. We summarize these in the following table ($Q, \widetilde{Q}$ are the complex scalar fields of a hypermultiplet, and $\lambda_\alpha^\mathcal{I}$ and $\widetilde{\lambda}_{\dot{\alpha}}^\mathcal{I}$ are the left- and right-moving fermions of a vector multiplet)
 \begin{table}[htbp]
     \renewcommand{\arraystretch}{1.5}
     \centering
@@ -358,7 +363,7 @@ which leads to
     h = R' + j_1' + j_2' = R + j_2 + 1, \quad r = j_2' - j_1' = j_2 + \frac{1}{2}.
 \end{equation}
 
-\subsection{Interpretation of certain multiplets}
+\subsection{Hall-Littlewood chiral rings}
 The Schur operators of type $\hat{\mathcal{B}}_R, \mathcal{D}_{R(0,j_2)}$ and $\bar{\mathcal{D}_R(j_1, 0)}$ can be understood as special cases of conventional $\mathcal{N}=1$ chiral or anti-chiral operators.
 
 Let us focus on the $\mathcal{N}=1$ Poincar\'{e} subalgebra that contains the supercharges
@@ -366,6 +371,20 @@ Let us focus on the $\mathcal{N}=1$ Poincar\'{e} subalgebra that contains the su
     \mathcal{Q}_\alpha^2, \quad \widetilde{\mathcal{Q}}_{2 \dot{\alpha}}.
 \end{equation}
 Then we ask what subset of Schur operators are also elements of the chiral ring for this $\mathcal{N}=1$ subalgebra. Such operators will be annihilated by both spinorial components of the anti-chiral supercharge $\widetilde{\mathcal{Q}}_{2 \dot{\alpha}}$, $\dot{\alpha} = \dot{\pm}$. These operators have $j_2 = 0$, which are Schur operators of type $\hat{\mathcal{B}}_R$ and $\bar{\mathcal{D}}_{R(j_1,0)}$. These are precisely the operators that contribute to the Hall-Littlewood limit of the superconformal index, and we refer to them as \textbf{Hall-Littlewood operators}. They form a ring called the \textbf{Hall-Littlewood chiral ring}, which is a consistent truncation of the full $\mathcal{N}=1$ chiral ring.
+
+In complete analogy, we may also define a Hall-Littlewood anti-chiral ring, which contains the Schur operators of type $\hat{\mathcal{B}}_R$ and $\mathcal{D}_{R(0,j_2)}$.
+
+Schur operators of type $\hat{\mathcal{B}}_R$ belong to both HL rings. These are half-BPS operators that are annihilated by both $\mathcal{Q}_\alpha^1$ and $\widetilde{\mathcal{Q}}_{2\dot{\alpha}}$. They form a further truncation of the $\mathcal{N} = 1$ chiral ring to the \textbf{Higgs chiral ring}, which gets its name because the vacuum expectation values of these operators parametrize the Higgs branch of the theory.
+
+\subsection{Interpretation of certain multiplets}
+Let us look in greater detail at some Schur-type shortened multiplets of particular physical interest:
+\begin{itemize}
+    \item $\hat{\mathcal{C}}_{0(0,0)}$: Stress-tensor multiplet. The superconformal primary is a scalar operator of dimension two that is a singlet under the $SU(2)_R \times U(1)_r$. The Schur operator is the highest weight component of the $SU(2)_R$ current: $J^{11}_{+\dot{+}}$ of the $SU(2)_R$.
+    \item $\hat{\mathcal{C}}_{0(j_1,j_2)}$: Higher-spin currents multiplets. These generalize the stress-tensor multiplet and contain conserved currents of spin higher than two.
+    \item $\hat{\mathcal{B}}_{\frac{1}{2}}$: This is the superconformal multiplet of free hypermultiplets.
+    \item $\hat{\mathcal{B}}_1$: Flavor-current multiplet
+    \item $\mathcal{D}_{0(0,0)} \oplus \bar{\mathcal{D}}_{0(0,0)}$: This is the superconformal multiplet of free $\mathcal{N}=2$ vector multiplets.
+\end{itemize}
 
 \section{Symmetry enhancement}
 We consider the following map
@@ -381,16 +400,182 @@ The holomorphic $\mathfrak{sl}(2)$ algebra generated by $L_0, L_{\pm 1}$ is enha
 \end{equation}
 This means that if the 4d theory is unitary, the chiral algebra would be non-unitary.
 
+\bigskip
+\noindent\textbf{Explicit calculation.} The Schur operator is the component $J^{11}_{+\dot{+}}$ of the $SU(2)_R$ current $J^{\mathcal{I} \mathcal{J}}_{\alpha \dot{\alpha}}$. The corresponding twisted-translated operator is defined as follows
+\begin{equation}
+    \mathcal{J}_R(z, \bar{z}) := u_\mathcal{I}(\bar{z}) u_\mathcal{J}(\bar{z}) J^{\mathcal{IJ}}_{+\dot{+}}(z, \bar{z}).
+\end{equation}
+The OPE of two $SU(2)_R$ currents
+\begin{equation}
+    J_\mu^\mathcal{IJ}(x) J_\nu^\mathcal{KL}(0) \sim \frac{3 c_\mathrm{4d}}{4 \pi^4} \epsilon^{\mathcal{K}(\mathcal{I}} \epsilon^{\mathcal{J})\mathcal{L}} \frac{x^2 g_{\mu \nu} - 2 x_\mu x_\nu}{x^8} + \frac{2i}{\pi^2} \frac{x_\mu x_\nu x \cdot J^{(\mathcal{K} ( \mathcal{I}} \epsilon^{\mathcal{J}) \mathcal{L}) } }{x^6} + \cdots.
+\end{equation}
+Then the OPE of twisted-translated Schur operators is given by
+\begin{equation}
+\begin{aligned}
+    \mathcal{J}_R(z, \bar{z}) \mathcal{J}_R(0,0) \sim 
+\end{aligned}
+\end{equation}
+
 \subsection{Affine enhancement of the flavor symmetry}
 On the other hand, the flavor symmetries of $\mathcal{T}$ are always enhanced into affine symmetries of $\chi[\mathcal{T}]$, and the central charges of these flavor symmetries satisfy
 \begin{equation}
     k_\mathrm{2d} = -\frac{1}{2} k_\mathrm{4d}.
 \end{equation}
 
-\section{Examples}
+\section{Examples of free theories}
 \subsection{VOAs of free theories}
+\textbf{Free hypermultiplet.}
+Let us consider a theory of a single free hypermultiplet. The hypermultiplet itself lies in the short supermultiplet $\hat{\mathcal{B}}_{\frac{1}{2}}$, in which the primary Schur operators are the scalars $Q$ and $\widetilde{Q}$. These are the highest weight states in a pair of $SU(2)_R$ doublets,
+\begin{equation}
+    Q^\mathcal{I} = \begin{pmatrix}
+        Q\\ \widetilde{Q}^*
+    \end{pmatrix}, \quad \widetilde{Q}^\mathcal{I} = \begin{pmatrix}
+        \widetilde{Q}\\ - Q^*
+    \end{pmatrix}.
+\end{equation}
+The single free hypermultiplet enjoys an $SU(2)_F$ flavor symmetry, under which $Q^\mathcal{I}$ and $\widetilde{Q}^\mathcal{I}$ transform as a doublet. We introduce the following tensor
+\begin{equation}
+    Q^\mathcal{I}_{\hat{\mathcal{I}}} := \begin{pmatrix}
+        Q & \widetilde{Q}\\
+        \widetilde{Q}^* & - Q^*
+    \end{pmatrix},
+\end{equation}
+where $\hat{\mathcal{I}}$ is the $SU(2)_F$ index.
+
+The Schur operators in this free theory are all the words that can be constructed out of letters $Q, \widetilde{Q}, \partial_{+\dot{+}}$.
+The twisted-translated operators are defined as
+\begin{equation}
+    Q_{\hat{\mathcal{I}}} (z, \bar{z}) := u_\mathcal{I}(\bar{z}) Q^\mathcal{I}_{\hat{\mathcal{I}}}(z, \bar{z}).
+\end{equation}
+Let $q_{\hat{\mathcal{I}}} (z) := [Q_{\hat{\mathcal{I}}}(z, \bar{z})]$ be the cohomology class, then we have
+\begin{equation}
+    q_{\hat{\mathcal{I}}}(z) q_{\hat{\mathcal{J}}}(w) \sim \frac{\epsilon_{\hat{\mathcal{I}} \hat{\mathcal{J}}}}{z-w}.
+\end{equation}
+
+Let us unpack these. If we denote the components by $q_{\hat{\mathcal{I}}} = (q, \tilde{q})$, we have
+\begin{equation}
+    q(z) = [Q(z, \bar{z}) + \bar{z} \widetilde{Q}^*(z, \bar{z})], \quad \tilde{q}(z) = [\widetilde{Q}(z, \bar{z}) - \bar{z} Q^*(z, \bar{z}) ].
+\end{equation}
+Then
+\begin{equation}
+\begin{aligned}
+    q(z) \tilde{q}(w) &\sim [Q(z, \bar{z}) \widetilde{Q}(w, \bar{w})] - \bar{w} [Q(z, \bar{z}), Q^*(w, \bar{w})] \\
+    & \quad + \bar{z} [\widetilde{Q}^*(z, \bar{z})\widetilde{Q}(w, \bar{w})] - \bar{z} \bar{w} [\widetilde{Q}^*(z, \bar{z}) Q^*(w,\bar{w})]\\
+    &\sim 0 - \bar{w} \cdot \frac{1}{|z-w|^2} + \bar{z} \cdot \frac{1}{|z-w|^2} - 0\\
+    &\sim \frac{1}{z-w}.
+\end{aligned}
+\end{equation}
+The chiral algebra of the free hypermultiplet is thus the free symplectic boson algebra.
+
+****** possible generalization: half hypermultiplets
+
+\bigskip
+\noindent \textbf{Free vector multiplet.} Free vectors lie in the short supermultiplet $\bar{\mathcal{D}}_{0(0,0)}$ and $\mathcal{D}_{0(0,0)}$, whose superconformal primaries are the complex scalar $\phi$ and its conjugate $\bar{\phi}$, respectively. The primary Schur operators in these multiplets are the fermions $\lambda_+^1$ and $\tilde{\lambda}_{\dot{1}}^1$, and we can obtain the descendant Schur operators by acting with $\partial_{+\dot{+}}$.
+
+The twisted-translated operators are defined as follows
+\begin{equation}
+\begin{aligned}
+    \lambda(z, \bar{z}) &:= u_\mathcal{I}(\bar{z}) \lambda_+^\mathcal{I}(z, \bar{z}) = \lambda^1_+(z, \bar{z}) + \bar{z} \lambda^2_+(z, \bar{z}),\\
+    \tilde{\lambda}(z, \bar{z}) &:= u_\mathcal{I}(\bar{z}) \tilde{\lambda}_{\dot{+}}^\mathcal{I}(z, \bar{z}) = \tilde{\lambda}^1_{\dot{+}}(z, \bar{z}) + \bar{z} \tilde{\lambda}^2_{\dot{+}}(z, \bar{z})
+\end{aligned}
+\end{equation}
+Denote the cohomology class by
+\begin{equation}
+    \lambda(z) := [\lambda(z, \bar{z})], \quad \tilde{\lambda}(z) := [\tilde{\lambda}(z, \bar{z})]
+\end{equation}
+Then
+\begin{equation}
+\begin{aligned}
+    \tilde{\lambda}(z) \lambda(w) &\sim [\tilde{\lambda}^1_{\dot{+}}(z, \bar{z}) \lambda^1_+(w, \bar{w})] + \bar{w} [\tilde{\lambda}^1_{\dot{+}}(z, \bar{z}) \lambda_+^2(w, \bar{w})] \\
+    & \quad + \bar{z} [\tilde{\lambda}^2_{\dot{+}}(z, \bar{z}) \lambda_+^1(w, \bar{w})] + \bar{z} \bar{w} [\tilde{\lambda}^2_{\dot{+}}(z, \bar{z}) \lambda_+^2(w, \bar{w})]\\
+    &\sim 0 + \bar{w} \cdot \frac{-(\bar{z} - \bar{w})}{(z-w)^2 (\bar{z} - \bar{w})^2} + \bar{z} \cdot \frac{(\bar{z} - \bar{w})}{(z-w)^2 (\bar{z}- \bar{w})^2} + 0\\
+    &\sim \frac{1}{(z-w)^2}.
+\end{aligned}
+\end{equation}
+Similarly we can calculate other OPEs, and obtain
+\begin{equation}
+    \tilde{\lambda}(z) \lambda(0) \sim \frac{1}{z^2}, \quad \lambda(z) \tilde{\lambda}(0) \sim - \frac{1}{z^2}.
+\end{equation}
+We can recognize this chiral algebra as the $(b,c)$ ghost system of weight $(1,0)$,
+\begin{equation}
+    \tilde{\lambda}(z) := b(z), \quad \lambda(z) := \partial c(z).
+\end{equation}
+Recall that for $(b,c)$ ghost system, we have $c(z) b(w) \sim 1/(z-w)$.
+
+However, in making this identification, we include $c_0$ mode, which is absent in the chiral algebra generated by $\lambda, \tilde{\lambda}$. To be precise, we should associate this chiral algebra to the \textbf{small algebra} of the $(b,c)$ system. The Fock space of the small algebra is the subspace of the $(b,c)$ Fock space that does not contain $c_0$, or equivalently, the subspace annihilated by $b_0$.
+
+\section{Gauging}
+
+Lagrangian $\mathcal{N}=2$ SCFTs can be described using hypermultiplets and vector multiplets as elementary building blocks. In particular, such an SCFT consists of vector multiplets transforming in the adjoint representation of a semisimple gauge group $G = G_1 \times G_2 \times \cdots \times G_k$, along with a collection of hypermultiplets transforming in some representation of the gauge group such that the one-loop beta functions for all gauge couplings vanish.
+
+The building blocks of the corresponding chiral algebra include
+\begin{itemize}
+    \item a collection of symplectic bosons
+    \item a collection of $(b,c)$-ghost small algebras
+\end{itemize}
+When the gauge couplings are strictly zero, the chiral algebra is simply obtained by imposing the Gauss law constraint (restricting to the gauge-invariant operators).
+
+We also consider more general SCFTs. Given a general superconformal field theory $\mathcal{T}$ with $G_F$ flavor symmetry, a new SCFT is obtained by gauging a subgroup $G \subset G_F$ provided the gauge coupling beta function vanishes. We will denote the gauged theory with a nonzero gauge coupling $g$ as $\mathcal{T}_G$. By assumption, $\mathcal{T}$ possesses a conserved flavor symmetry current $J^A_{\alpha \dot{\alpha}}$, where $A = 1,..., \dim G$, which is the top component of $\hat{\mathcal{B}}_1$. The gauged theory $\mathcal{T}_G$ is described by minimally coupling an $\mathcal{N}=2$ vector multiplet to $\hat{\mathcal{B}}_1$.
+
+Let us assume that we know $\chi[\mathcal{T}]$. In particular, there will be an affine current $J^A(z)$ at level $k_\mathrm{2d} = - \frac{1}{2}k_\mathrm{4d}$. At zero gauge coupling, the chiral algebra of the gauged theory is obtained by imposing the Gauss law constraint on the tensor product algebra of $\chi[\mathcal{T}]$ with the $(b,c)$ ghost (also imposing the auxiliary condition $b_0^A \psi = 0$ for any state $\psi$).
+
+The affine current associated to the $G$ symmetry in the ghost sector is
+\begin{equation}
+    J^A_\mathrm{gh} := -i f^{ABC} (c^B b^C).
+\end{equation}
+The total gauge symmetry current is given by
+\begin{equation}
+    J^A_\mathrm{tot}(z) := J^A(z) + J^A_\mathrm{gh}(z).
+\end{equation}
+The Gauss law, or gauge invariance, requires that all physical states should have vanishing total gauge charge, measured by the zero mode of the total gauge symmetry current.
+
+Symbolically, we have the chiral algebra at zero gauge coupling
+\begin{equation}
+    \chi[\mathcal{T}_G^{(0)}] = \{\psi \in \chi[\mathcal{T}] \otimes (b^A, c^A) \:|\: b_0^A \psi = J^A_{\mathrm{tot}~0} \psi = 0\}.
+\end{equation}
+
+But what is the chiral algebra for $\mathcal{T}_G$ with $g \neq 0$?
+
+\section{BRST reduction}
+The vanishing of the one-loop beta function amounts to the requirement that in the ungauged theory $\mathcal{T}$, the flavor symmetry central charge is given by
+\begin{equation}
+    k_\mathrm{4d} = 4 h^\vee,
+\end{equation}
+which means that in $\chi[\mathcal{T}]$
+\begin{equation}
+    k_\mathrm{2d} = -2 h^\vee.
+\end{equation}
+The affine level of the ghost-sector flavor currents $J_\mathrm{gh}$ can be calculated to be $2 h^\vee$. Thus the level of the total affine current $J^A_\mathrm{tot}$ needs to be zero.
+
+In this case, we can construct a nilpotent BRST operator in the chiral algebra. We define
+\begin{equation}
+    Q_\mathrm{BRST} := \oint \frac{dz}{2\pi i} j_\mathrm{BRST}(z), \quad j_\mathrm{BRST} := c_A \left(J^A + \frac{1}{2} J^A_\mathrm{gh}\right).
+\end{equation}
+Then the chiral algebra corresponding to the gauged theory at finite coupling is obtained by passing to the cohomology of $Q_\mathrm{BRST}$ relative to the ghost zero modes $b_0^A$,
+\begin{equation}
+    \chi[\mathcal{T}_G] = \mathcal{H}^*_\mathrm{BRST}[\psi \in \chi[\mathcal{T}] \otimes (b^A, c^A) \:|\: b_0^A \psi = 0].
+\end{equation}
+
+The first remark is that we have
+\begin{equation}
+    \{b_0^A, Q_\mathrm{BRST}\} = J^A_{\mathrm{tot}~0}.
+\end{equation}
+Therefore, for states in the small algebra ($b_0^A \psi = 0$) that are $Q_\mathrm{BRST}$-closed, they are automatically gauge invariant.
+
+We can rewrite $Q_\mathrm{BRST}$ and separate out the ghost zero modes,
+\begin{equation}
+    Q_\mathrm{BRST} = c_0^A J^A_{\mathrm{tot}~0} + b_0^A X^A + Q^-,
+\end{equation}
+where $X^A, Q^-$ have explicit forms in terms of the structure constants and the modes of the ghost fields. One important property of $Q^-$ is that it fails to be nilpotent due to a term proportional to $J^A_{\mathrm{tot}~0}$. However, it is still nilpotent if we restrict ourselves to gauge invariant states. Then we have
+\begin{equation}
+    \chi[\mathcal{T}_G] = \mathcal{H}^*_{Q^-}[\psi \in \chi[\mathcal{T}] \otimes (\rho^{+A}, \rho^{-A}) \:|\: J^A_{\mathrm{tot}~0} \psi = 0].
+\end{equation}
 
 
+
+
+\appendix
+\section{Different limits of the superconformal index}
 
 
 
